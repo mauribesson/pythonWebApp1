@@ -15,8 +15,9 @@ def blog():
     return render_template('blog.html')
 
 @app.route('/post')
-def post():
-    return render_template('post.html')
+@app.route('/post/<post_id>')
+def post(post_id=''):
+    return render_template('post.html', post_id=post_id)
 
 if __name__ == '__main__':
     app.run(debug=True)

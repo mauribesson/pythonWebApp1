@@ -14,5 +14,9 @@ def about():
 def blog():
     return render_template('blog.html')
 
+@app.route('/post')
+def post():
+    render_template('post.html')
+
 if __name__ == '__main__':
     app.run(debug=True)
